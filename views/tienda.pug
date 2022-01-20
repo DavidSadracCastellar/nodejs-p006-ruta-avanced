@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+
+head
+    title Tienda
+    link(rel="stylesheet", href="css/style.css")
+
+body
+    h1
+        a(href="david_castellar.het") Tienda de Camisetas
+
+    each camisa in camisetas
+        div.item
+            h2 Camiseta #{camisa.color}
+            p #{camisa.name}
+            a(href="tienda/comprar/" + camisa.color) Comprar
